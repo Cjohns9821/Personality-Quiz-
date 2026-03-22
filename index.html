@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Personality Quiz</title>
-    <link rel="icon" type="image/x-icon" href="/img/ideas.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href ="./css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Personality Quiz</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <h1 class="text-center mt-4">YOUR QUIZ TITLE HERE</h1>
-    
-    <!-- Start quiz element -->
-    <div class="container d-flex justify-content-center" id="question-1">
-      <div class="card my-4 p-4 question-block" style="width: 75%;">
-        <h4 class="mb-3">YOUR QUIZ QUESTION HERE</h4>
-        <div class="row g-2">
-          <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="A">ANSWER CHOICE A</button>
-          </div>
-          <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="B">ANSWER CHOICE B</button>
-          </div>
-          <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="C">ANSWER CHOICE C</button>
-          </div>
-          <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="D">ANSWER CHOICE D</button>
-          </div>
-        </div>
-      </div>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <h1 class="text-center mb-4">What Color Matches Your Personality?</h1>
+
+    <!-- Question 1 -->
+    <div class="question-block mb-4">
+      <h4>How do you spend your free time?</h4>
+      <button class="btn btn-outline-primary answer-btn" data-color="red">Trying something exciting</button>
+      <button class="btn btn-outline-primary answer-btn" data-color="blue">Relaxing or reading</button>
+      <button class="btn btn-outline-primary answer-btn" data-color="green">Being outdoors</button>
+      <button class="btn btn-outline-primary answer-btn" data-color="yellow">Doing something creative</button>
     </div>
 
-    
-    
-    <!-- End quiz element -->
-
-    <!-- Add more quiz elements here -->
-
-
-
-    <div class="container d-flex justify-content-center">
-      <button id="show-result" class="btn btn-success my-4">Show Results</button>
-    </div>    
-    <!-- Output the result here -->
-    <div class="container d-flex justify-content-center">
-      <div id="result-container" class="card p-4 mb-4" style="width: 75%; display: none;">
-        <h3>Your Result:</h3>
-        <p id="result-text"></p>
-      </div>
+    <!-- Question 2 -->
+    <div class="question-block mb-4">
+      <h4>What describes your personality best?</h4>
+      <button class="btn btn-outline-primary answer-btn" data-color="red">Bold</button>
+      <button class="btn btn-outline-primary answer-btn" data-color="blue">Calm</button>
+      <button class="btn btn-outline-primary answer-btn" data-color="green">Friendly</button>
+      <button class="btn btn-outline-primary answer-btn" data-color="yellow">Playful</button>
     </div>
-    
-    <!-- Connect to your script file here -->
-     <script src = "./js/script.js"></script>
+
+    <!-- Question 3 -->
+    <div class="question-block mb-4">
+      <h4>What’s your ideal weekend?</h4>
+      <button class="btn btn-outline-primary answer-btn" data-color="red">Going on an adventure</button>
+      <button class="btn btn-outline-primary answer-btn" data-color="blue">Quiet time at home</button>
+      <button class="btn btn-outline-primary answer-btn" data-color="green">A walk in nature</button>
+      <button class="btn btn-outline-primary answer-btn" data-color="yellow">Hanging out with friends</button>
+    </div>
+
+    <!-- Results Button -->
+    <div class="text-center">
+      <button id="result-btn" class="btn btn-success btn-lg mt-3">
+        Give Me the Results
+      </button>
+    </div>
+
+    <!-- Result Container -->
+    <div id="result-container" class="mt-4 text-center fs-4 fw-bold"></div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Your Script -->
+  <script src="script.js"></script>
 </body>
 </html>
